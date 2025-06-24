@@ -13,3 +13,8 @@ let loader = document.getElementById("preloader");
 window.addEventListener("load", function () {
   loader.style.display = "none";
 });
+
+window.addEventListener("scroll", function () {
+  let header = this.document.getElementById("header");
+  header.classList.toggle("header", window.scrollY > 0);
+});
